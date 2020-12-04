@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:shrinkMode="strict"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gyankunj.ui.auth.signUp.SignUpViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.gyankunj.ui.auth.forgotPassword.ForgotPasswordActivity">
+
+
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/sigin_top_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:onClick="@{()->viewModel.back()}"
+            android:id="@+id/cl_back"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_arrow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_text_size"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/enter_your_phone_number_to_get_started"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/phone_number"
+            android:paddingLeft="0dp"
+            android:gravity="bottom"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/Theme.AppCompat"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/fade_line_color"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/fade_line_color"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:text="@={viewModel.txtPhoneNumber}"
+                android:paddingBottom="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/onboarding_button"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="@{viewModel::next}"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.8" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sign_in"
+            app:layout_constraintEnd_toEndOf="@id/btn_sign_in"
+            app:layout_constraintHorizontal_bias="0.482"
+            android:indeterminate="true"
+            android:elevation="10dp"
+            android:indeterminateTint="@color/white"
+            app:layout_constraintStart_toStartOf="@id/btn_sign_in"
+            app:layout_constraintTop_toTopOf="@id/btn_sign_in"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:elevation="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintTop_toTopOf="@+id/btn_sign_in"
+            app:layout_constraintBottom_toBottomOf="@id/btn_sign_in"
+            app:layout_constraintEnd_toEndOf="@id/btn_sign_in"
+            app:layout_constraintStart_toStartOf="@id/btn_sign_in"
+            />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/by_clicking_the_sign_up_button_you_have_agreed"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tl_number"
+            app:layout_constraintTop_toBottomOf="@+id/tl_number" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/forgot_password_text_color"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintStart_toEndOf="@+id/textView29"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+        <TextView
+            android:id="@+id/textView29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/the"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/small_text_size"
+            app:layout_constraintStart_toStartOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

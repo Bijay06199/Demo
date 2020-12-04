@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shrinkMode="strict">
+    <size android:height="4dip" android:width="15dip"/>
+
+    <corners android:topRightRadius="3dp" android:bottomRightRadius="3dp"/>
+    <solid android:color="@color/onboarding_button_color"/>
+
+</shape>

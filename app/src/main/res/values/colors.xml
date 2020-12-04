@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources tools:shrinkMode="strict" xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#08BD80</color>
+
+
+    <color name="text_color">#2A3632</color>
+    <color name="hint_color">#9A2A3632</color>
+    <color name="fade_line_color">#322A3632</color>
+    <color name="onboarding_button_color">#08BD80</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="nonSelectColor">#A4FFFFFF</color>
+    <color name="forgot_password_text_color">#287FCB</color>
+    <color name="forgot_password_fade_text_color">#65287FCB</color>
+    <color name="facebook_color">#4267B2</color>
+
+    <color name="fade_black">#CB5A5959</color>
+    <color name="card_focused_color">#3408BD80</color>
+    <color name="background_fade_color">#83262627</color>
+
+    <color name="view_background_color">#22262627</color>
+
+    <color name="success">#139B22</color>
+    <color name="danger">#57040B</color>
+    <color name="info">#008577</color>
+    <color name="warning">#FF6D00</color>
+    <color name="transparent_color">#00FFFFFF</color>
+
+    <color name="red">#F2545B</color>
+    <color name="fade_text_color">#722A3632</color>
+    <color name="fade_blue_line_color">#D1DADB</color>
+    <color name="normal_fade_text_color">#2A3632</color>
+
+
+
+</resources>

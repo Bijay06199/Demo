@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="model"
+            type="com.example.gyankunj.ui.home.mycourse.chapter.topics.formulas.model.FormulaModel" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/formula_card_view_height"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:focusable="true"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/card_focused_effect_color">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:background="@color/onboarding_button_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@{model.shape}"
+                tools:text="@string/square"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView46"
+                app:srcCompat="@drawable/square_image" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="12dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/fade_text_color"
+                app:layout_constraintStart_toStartOf="@id/imageView11"
+                app:layout_constraintTop_toBottomOf="@id/imageView11" />
+
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/l"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintEnd_toStartOf="@+id/view3"
+                app:layout_constraintStart_toEndOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2"
+                app:layout_constraintVertical_bias="0.769" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="12dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/fade_text_color"
+                app:layout_constraintEnd_toEndOf="@id/imageView11"
+                app:layout_constraintTop_toBottomOf="@id/imageView11" />
+
+            <TextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/_1_area_a"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="@+id/textView46"
+                app:layout_constraintTop_toBottomOf="@+id/textView51" />
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@{model.area}"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textView52"
+                app:layout_constraintStart_toEndOf="@+id/textView52"
+                app:layout_constraintTop_toTopOf="@+id/textView52" />
+
+            <TextView
+                android:id="@+id/textView66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/_2_perimeter"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintStart_toStartOf="@+id/textView52"
+                app:layout_constraintTop_toBottomOf="@+id/textView52" />
+
+            <TextView
+                android:id="@+id/textView67"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="@{model.perimeter}"
+                android:textSize="13sp"
+                android:fontFamily="@font/poppins_regular"
+                app:layout_constraintBottom_toBottomOf="@+id/textView66"
+                app:layout_constraintStart_toEndOf="@+id/textView66"
+                app:layout_constraintTop_toTopOf="@+id/textView66" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gyankunj.ui.home.profile.ProfileViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.gyankunj.ui.home.mycourse.teachersBio.TeachersProfileActivity">
+
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:background="@color/white">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/topAppBar"
+            app:navigationIcon="@drawable/back">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile"
+                android:textSize="@dimen/medium_text_size"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+
+                />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:shape="ring"
+        app:cardBackgroundColor="@color/onboarding_button_color"
+        app:cardCornerRadius="360dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:src="@drawable/person5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="10dp"
+            android:shape="ring"
+            app:cardBackgroundColor="@color/onboarding_button_color"
+            app:cardCornerRadius="360dp"
+            app:layout_constraintBottom_toBottomOf="@+id/materialCardView3"
+            app:layout_constraintEnd_toEndOf="@+id/materialCardView3"
+            app:layout_constraintTop_toTopOf="@+id/materialCardView3"
+            app:layout_constraintVertical_bias="0.93">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_menu_camera" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_first_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="bottom"
+            android:hint="@string/enter_first_name"
+            android:paddingLeft="0dp"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/Theme.AppCompat"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/fade_line_color"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/fade_line_color"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textPersonName"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_last_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="bottom"
+            android:hint="@string/last_name"
+            android:paddingLeft="0dp"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/Theme.AppCompat"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/fade_line_color"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_first_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/fade_line_color"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textPersonName"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_emial"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="bottom"
+            android:hint="@string/email_address"
+            android:paddingLeft="0dp"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/Theme.AppCompat"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/fade_line_color"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_last_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/fade_line_color"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textEmailAddress"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_number"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="bottom"
+            android:hint="@string/mobile_number"
+            android:paddingLeft="0dp"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/Theme.AppCompat"
+            app:boxBackgroundMode="none"
+            app:boxStrokeColor="@color/fade_line_color"
+            app:boxStrokeWidthFocused="1dp"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/hint_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_emial">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/fade_line_color"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:paddingBottom="15dp"
+                android:textColor="@color/text_color"
+                android:textSize="16sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/onboarding_button"
+            android:fontFamily="@font/poppins_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tl_number"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

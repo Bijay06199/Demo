@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:shrinkMode="strict"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+
+        <variable
+            name="model"
+            type="com.example.gyankunj.ui.home.api.BannerRow" />
+
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/banner_image_view"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                imageSrc="@{model.image}"
+                tools:src="@drawable/ic_profile"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                app:layout_constraintCircleRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/background_fade_color"
+                app:layout_constraintBottom_toBottomOf="@+id/banner_image_view"
+                app:layout_constraintEnd_toEndOf="@id/banner_image_view"
+                app:layout_constraintStart_toStartOf="@id/banner_image_view"
+                app:layout_constraintTop_toTopOf="@+id/banner_image_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="banner_height">150dp</dimen>
+    <dimen name="notice_board_height">120dp</dimen>
+    <dimen name="course_card_view_width">150dp</dimen>
+    <dimen name="course_icon_size">80dp</dimen>
+    <dimen name="noticeboard_popup_height">900dp</dimen>
+    <dimen name="chapter_card_height">150dp</dimen>
+    <dimen name="videos_height">290dp</dimen>
+    <dimen name="videos_width">315dp</dimen>
+    <dimen name="chapters_recyclerview_height">340dp</dimen>
+    <dimen name="list_item_height">90dp</dimen>
+    <dimen name="topics_card_height">530dp</dimen>
+    <dimen name="formula_card_view_height">240dp</dimen>
+    <dimen name="profile_icon_size">150dp</dimen>
+    <dimen name="checkbox_height">90dp</dimen>
+    <dimen name="quiz_popUp_height">1000dp</dimen>
+    <dimen name="course_list_height">320dp</dimen>
+
+
+</resources>

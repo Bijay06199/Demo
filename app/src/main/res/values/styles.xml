@@ -1,0 +1,43 @@
+<resources tools:shrinkMode="strict" xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="OnBoardingTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+    <style name="side_navigation_drawer">
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+    <style name="TabTextColor" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/small_text_size</item>
+
+    </style>
+
+    <style name="SignInActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/onboarding_button_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/fade_line_color</item>
+        <item name="colorControlActivated">@color/fade_line_color</item>
+        <item name="colorControlHighlight">@color/fade_line_color</item>
+    </style>
+
+</resources>

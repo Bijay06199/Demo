@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" tools:shrinkMode="strict">
+    <item android:drawable="@drawable/tab_indicator_selected" android:state_selected="true" android:state_pressed="true">
+        <shape>
+            <corners android:radius="50dp"/>
+            <padding android:left="2dp" android:right="2dp"/>
+        </shape>
+
+    </item>
+    <item android:drawable="@drawable/inactive_tab_indicator" >
+        <shape>
+            <corners android:radius="50dp"/>
+            <padding android:left="3dp" android:right="3dp"/>
+        </shape>
+    </item>
+</selector>

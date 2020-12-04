@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:shrinkMode="strict"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.gyankunj.ui.home.mycourse.chapter.topics.viewModel.TopicOneViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gyankunj.ui.home.mycourse.chapter.topics.TopicOneActivity">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="20dp"
+        android:background="@color/white">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/topAppBar"
+            app:layout_scrollFlags="noScroll"
+            app:navigationIcon="@drawable/back">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/medium_text_size"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/text_color"
+                android:text="@string/physics"
+                />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView53"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/chapter_1"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/normal_fade_text_color"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/physical_quantities"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/onboarding_heading"
+            app:layout_constraintStart_toStartOf="@+id/textView53"
+            app:layout_constraintTop_toBottomOf="@+id/textView53" />
+
+        <TextView
+            android:id="@+id/textView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/by_kumar_jha"
+            android:textSize="@dimen/small_text_size"
+            android:onClick="@{viewModel::teacherProfile}"
+            android:textColor="@drawable/fade_text_selector"
+            android:fontFamily="@font/poppins_regular"
+            app:layout_constraintStart_toStartOf="@+id/textView54"
+            app:layout_constraintTop_toBottomOf="@+id/textView54" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            style="@style/Widget.Design.TabLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView55"
+            app:tabBackground="@drawable/custom_tab_indicator"
+            app:tabIndicator="@drawable/custom_tab_indicator"
+            app:tabIndicatorAnimationDuration="@integer/default_animation_duration"
+            app:tabMode="fixed"
+            app:tabMaxWidth="0dp"
+            app:tabGravity="fill"
+            app:tabRippleColor="@color/card_focused_color"
+            app:tabSelectedTextColor="@color/onboarding_button_color"
+            app:tabTextAppearance="@style/TabTextColor"
+            app:tabTextColor="@color/fade_black"
+            app:tabUnboundedRipple="true">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/info" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/lessons" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/formulas" />
+
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_layout_lessons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

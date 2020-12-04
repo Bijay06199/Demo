@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources tools:shrinkMode="strict" xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="dots_height">30dp</dimen>
+    <dimen name="onboarding_heading">20sp</dimen>
+    <dimen name="onboarding_desc">16sp</dimen>
+    <dimen name="onboarding_image_height">250dp</dimen>
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="medium_text_size">16sp</dimen>
+    <dimen name="large_text_size">32sp</dimen>
+    <dimen name="facebook_login_button_height">50dp</dimen>
+    <dimen name="otp_height">2dp</dimen>
+    <dimen name="otp_width">40dp</dimen>
+    <dimen name="popup_window_height">150dp</dimen>
+    <dimen name="splash_icon_height">130dp</dimen>
+    <dimen name="circle_image_size">60dp</dimen>
+    <dimen name="splash_icon_width">200dp</dimen>
+    <dimen name="banner_height">120dp</dimen>
+    <dimen name="notice_board_height">90dp</dimen>
+    <dimen name="course_card_view_width">120dp</dimen>
+    <dimen name="chapter_card_width">160dp</dimen>
+    <dimen name="chapter_card_height">110dp</dimen>
+    <dimen name="small_icon_size">25dp</dimen>
+    <dimen name="chapters_recyclerview_height">250dp</dimen>
+    <dimen name="videos_height">240dp</dimen>
+    <dimen name="videos_width">265dp</dimen>
+    <dimen name="play_icon_height">30dp</dimen>
+    <dimen name="topics_card_height">350dp</dimen>
+    <dimen name="list_item_height">60dp</dimen>
+    <dimen name="checkbox_height">60dp</dimen>
+    <dimen name="quiz_popUp_height">700dp</dimen>
+    <dimen name="view_height">2dp</dimen>
+    <dimen name="formula_card_view_height">200dp</dimen>
+
+    <dimen name="noticeboard_popup_height">600dp</dimen>
+
+    <dimen name="course_icon_size">50dp</dimen>
+    <dimen name="profile_icon_size">125dp</dimen>
+    <dimen name="course_list_height">280dp</dimen>
+
+
+</resources>

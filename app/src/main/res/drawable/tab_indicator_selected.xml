@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:shrinkMode="strict">
+
+    <item android:id="@android:id/background" android:gravity="bottom">
+        <shape>
+            <size android:width="120dp" android:height="2dp"/>
+            <corners android:radius="50dp"/>
+            <solid android:color="@color/onboarding_button_color"/>
+
+        </shape>
+    </item>
+    <item android:gravity="bottom">
+        <shape>
+            <gradient
+                android:startColor="@color/onboarding_button_color"
+                android:endColor="@color/onboarding_button_color"
+                android:gradientRadius="25dip"
+                android:type="radial"
+                android:centerY="0.75"
+                android:angle="270" />
+
+
+            <size android:width="100dp" android:height="2dp"/>
+            <corners android:topLeftRadius="20dp" android:bottomRightRadius="20dp" android:bottomLeftRadius="20dp" android:topRightRadius="20dp"/>
+
+        </shape>
+    </item>
+
+</layer-list>
